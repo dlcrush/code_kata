@@ -50,3 +50,32 @@ describe('palindrome', function() {
 		assert.equal(true, palindrome('top spot'));
 	});
 });
+
+function firstNonRepeatingChar(str) {
+	var processed = [];
+
+	for(var i = 0; i < str.length; i ++) {
+		var current = str.charAt(i);
+
+		if (processed.indexOf(current) != -1) {
+			continue;
+		}
+
+		var restOfString = str.substr(i+1);
+		if (restOfString.indexOf(current) == -1) {
+			return current;
+		}
+		processed.push(current);
+	}
+
+	return null;
+}
+
+describe('firstNonRepeatingChar', function() {
+	it('finds the first non repeatable character in string', function() {
+		assert.equal('m', firstNonRepeatingChar('llama'));
+		assert.equal('b', firstNonRepeatingChar('bacon'));
+		assert.equal(null, firstNonRepeatingChar('aaaaa'));
+		assert.equal('v', firstNonRepeatingChar('even'));
+	});
+});
