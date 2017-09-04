@@ -1,0 +1,22 @@
+{
+  "name": "code_kata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dlcrush/code_kata.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dlcrush/code_kata/issues"
+  },
+  "homepage": "https://github.com/dlcrush/code_kata#readme",
+  "dependencies": {
+    "mocha": "3.5.0"
+  }
+}
